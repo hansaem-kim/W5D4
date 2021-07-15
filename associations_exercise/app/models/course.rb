@@ -7,7 +7,7 @@ class Course < ApplicationRecord
 
     has_many :enrolled_students,
         through: :enrollments,
-        source: :User
+        source: :user
 
     belongs_to :prerequisite,
         primary_key: :id,
@@ -18,10 +18,6 @@ class Course < ApplicationRecord
         primary_key: :id,
         foreign_key: :instructor_id,
         class_name: :User
-
-
-
-
 
 
 end
